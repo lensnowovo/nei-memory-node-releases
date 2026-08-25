@@ -1,0 +1,55 @@
+name: Memory Node 问题反馈
+description: 提交不含业务数据的安装、连接或运行问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请勿上传数据库、记忆目录、项目材料、Token、激活码、许可证、完整日志或 Agent 配置。
+  - type: input
+    id: version
+    attributes:
+      label: Memory Node 版本
+      placeholder: 例如 0.1.4
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本
+      placeholder: 例如 Windows 11 24H2 x64
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题环节
+      options:
+        - 下载或安装
+        - 登录或激活
+        - Codex 连接
+        - WorkBuddy 连接
+        - 写入或召回
+        - 备份或存储目录
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 最小复现步骤
+      description: 请替换所有真实机构、基金、项目和记忆内容。
+    validations:
+      required: true
+  - type: input
+    id: error
+    attributes:
+      label: 稳定错误码（如有）
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我确认本 Issue 不含数据库、项目材料、记忆正文、Token、激活码、许可证或完整 Agent 配置。
+          required: true
